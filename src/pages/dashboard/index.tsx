@@ -7,7 +7,11 @@ const Index = () => {
   return (
     <>
       <Header />
-      <div>Dashboard</div>
+      <div className="container account-section bg-img">
+        <div className="row">
+          <h3>Dashboard</h3>
+        </div>
+      </div>
       <Footer />
     </>
   );
