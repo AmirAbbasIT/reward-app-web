@@ -5,28 +5,29 @@ import type { AppProps } from "next/app";
 import { AuthUserProvider } from "../context/firebaseContext";
 import { useRouter } from "next/router";
 import VertexLoader from "@/components/loaders/VertexLoader";
+import PreLoadeer from "@/components/loaders/PreLoadeer";
 
 export default function App({ Component, pageProps }: AppProps) {
   const { authUser, loading } = useFirebaseAuth();
   const router = useRouter();
 
-  React.useEffect(() => {
-    if (!loading && !authUser) router.push("/login");
-  }, [authUser, loading]);
+  // React.useEffect(() => {
+  //   if (!loading && !authUser) router.push("/login");
+  // }, [authUser, loading]);
 
   if (loading) {
     return (
       <>
-        <div className="grid h-screen place-items-center bg-yellow-500">
-          <VertexLoader />
-        </div>
+        <PreLoadeer />
       </>
     );
   }
 
   return (
     <AuthUserProvider>
-      <Component {...pageProps} />
+      <div className="page-wrapper">
+        <Component {...pageProps} />
+      </div>
     </AuthUserProvider>
   );
 }
