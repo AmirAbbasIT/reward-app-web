@@ -3,12 +3,12 @@ import React from "react";
 const Index = () => {
   return (
     <footer class="footer bg_img" data-background="assets/images/bg/bg-7.jpg">
-      <div class="footer__top">
-        <div class="container">
+      <div class="">
+        <div class="">
           <div class="row justify-content-center">
             <div class="col-lg-12 text-center">
-              <a href="#0" class="footer-logo">
-                <img src="assets/images/logo.png" alt="image" />
+              <a href="#0" class="m-2">
+                <img src="/logo.png" alt="image" style={{ width: "400px" }} />
               </a>
               <ul class="footer-short-menu d-flex flex-wrap justify-content-center mt-4">
                 <li>

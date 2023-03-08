@@ -14,7 +14,7 @@ const index = () => {
               href="#"
               onClick={() => router.push("/")}
             >
-              <img src="assets/images/logo.png" alt="site-logo" />
+              <img src="/logo.png" alt="site-logo" style={{ width: "247px" }} />
             </a>
             <ul className="account-menu mobile-acc-menu">
               <li className="icon">

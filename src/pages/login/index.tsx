@@ -9,6 +9,8 @@ import VertexLoader from "@/components/loaders/VertexLoader";
 import { signInWithGoogle } from "@/configs/firebaseinit";
 import { FcGoogle } from "react-icons/fc";
 import PreLoadeer from "@/components/loaders/PreLoadeer";
+import Header from "../../layouts/Header/index";
+import Footer from "../../layouts/Footer/Index";
 
 const loginSchema = Yup.object().shape({
   email: Yup.string()
@@ -56,6 +58,7 @@ const index = () => {
 
   return (
     <>
+      <Header />
       <div
         className="account-section bg_img"
         data-background="assets/images/bg/bg-5.jpg"
@@ -247,6 +250,7 @@ const index = () => {
           </motion.form>
         </div>
       </div> */}
+      <Footer />
     </>
   );
 };

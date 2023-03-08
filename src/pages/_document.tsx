@@ -17,7 +17,6 @@ export default function Document() {
       <Script src="assets/js/vendor/bootstrap.bundle.min.js"></Script>
       <Script src="assets/js/vendor/slick.min.js"></Script>
       <Script src="assets/js/vendor/wow.min.js"></Script>
-      <Script src="assets/js/contact.js"></Script>
       <Script src="assets/js/app.js"></Script>
       <body>
         <div className="scroll-to-top">
