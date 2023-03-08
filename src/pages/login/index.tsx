@@ -11,6 +11,7 @@ import { FcGoogle } from "react-icons/fc";
 import PreLoadeer from "@/components/loaders/PreLoadeer";
 import Header from "../../layouts/Header/index";
 import Footer from "../../layouts/Footer/Index";
+import Link from "next/link";
 
 const loginSchema = Yup.object().shape({
   email: Yup.string()
@@ -43,10 +44,12 @@ const index = () => {
   React.useEffect(() => {}, []);
 
   React.useEffect(() => {
-    if (authUser) {
+    if (authUser && !loading) {
       router.push("/dashboard");
     }
   }, [authUser]);
+
+  console.log(authUser);
 
   if (loading) {
     return (
@@ -143,9 +146,9 @@ const index = () => {
                     <div className="col-sm-6 ">
                       <p className="f-size-14">
                         Haven't an account?{" "}
-                        <a href="registration.html" className="base--color">
+                        <Link href="/register" className="base--color">
                           Sign Up
-                        </a>
+                        </Link>
                       </p>
                     </div>
                   </div>

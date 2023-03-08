@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
   // React.useEffect(() => {
   //   if (!loading && !authUser) router.push("/login");
   // }, [authUser, loading]);
-
+  console.log("user", authUser);
   if (loading) {
     return (
       <>

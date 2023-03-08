@@ -19,3 +19,10 @@ body{
   background-color: orange;
   border-color: white;
 }
+.custom-toast-error-id{
+  z-index: 10000000000000000000;
+}
+.dashboard-card{
+  color: yellow;
+  background-color: rgba(0,0,0,0.4);
+}
