@@ -1,8 +1,10 @@
+import useFirebaseAuth from "@/hooks/useFirebaseAuth";
 import { useRouter } from "next/router";
 import React from "react";
 
-const Index = () => {
+const Index = ({ ...rest }) => {
   const router = useRouter();
+  const { authUser } = useFirebaseAuth();
 
   return (
     <section
@@ -26,13 +28,18 @@ const Index = () => {
                 fastest and the most exciting returns on your investments, but
                 we also guarantee the security of your investment.
               </p>
-              <a
-                href="#0"
-                onClick={() => router.push("/login")}
-                className="cmn-btn text-uppercase font-weight-600 mt-4 mr-4"
-              >
-                Login
-              </a>
+              {!authUser ? (
+                <a
+                  href="#0"
+                  onClick={() => router.push("/login")}
+                  className="cmn-btn text-uppercase font-weight-600 mt-4 mr-4"
+                >
+                  Login
+                </a>
+              ) : (
+                <></>
+              )}
+
               {/* <a
                 href="#0"
                 className="cmn-btn text-uppercase font-weight-600 mt-4"

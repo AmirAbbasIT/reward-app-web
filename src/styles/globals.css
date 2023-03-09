@@ -26,3 +26,12 @@ body{
   color: yellow;
   background-color: rgba(0,0,0,0.4);
 }
+
+@media (max-width: 1200px){
+
+.header-logo{
+  top: -71px !important;
+}
+
+}
+

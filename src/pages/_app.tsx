@@ -6,14 +6,15 @@ import { AuthUserProvider } from "../context/firebaseContext";
 import { useRouter } from "next/router";
 import VertexLoader from "@/components/loaders/VertexLoader";
 import PreLoadeer from "@/components/loaders/PreLoadeer";
+// import { ToastContainer } from "react-toastify";
+// import { ToastMessage } from "react-toastr";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   const { authUser, loading } = useFirebaseAuth();
   const router = useRouter();
 
-  // React.useEffect(() => {
-  //   if (!loading && !authUser) router.push("/login");
-  // }, [authUser, loading]);
   console.log("user", authUser);
   if (loading) {
     return (
@@ -24,10 +25,12 @@ export default function App({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <AuthUserProvider>
-      <div className="page-wrapper">
-        <Component {...pageProps} />
-      </div>
-    </AuthUserProvider>
+    <>
+      <AuthUserProvider>
+        <div className="page-wrapper">
+          <Component {...pageProps} />
+        </div>
+      </AuthUserProvider>
+    </>
   );
 }

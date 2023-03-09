@@ -12,7 +12,7 @@ const Index = () => {
             <div className="section-header">
               <h2 className="section-title">
                 <span className="font-weight-normal">How</span>{" "}
-                <b className="base--color">Hyiplab</b>{" "}
+                <b className="base--color">Silver Cash</b>{" "}
                 <span className="font-weight-normal">Works</span>
               </h2>
               <p>

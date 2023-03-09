@@ -1,28 +1,11 @@
-import { toast } from "react-toastify";
-
+// import { toast } from "react-toastify";
+import toastr from "toastr";
 export const notifySuccess = (massage) => {
-  toast.success(`${massage}`, {
-    toastId: "custom-toast-success-id",
-    position: "top-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-  });
+  toastr.success(massage);
 };
 
 export const notifyError = (massage) => {
-  toast.error(`${massage}`, {
-    toastId: "custom-toast-error-id",
-    position: "top-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-  });
+  toastr.error(massage, "", {});
 };
 
 export const notifyInfo = (massage) => {
