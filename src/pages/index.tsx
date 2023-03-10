@@ -6,13 +6,13 @@ import Header from "../layouts/Header/index";
 import Hero from "../layouts/Hero/Index";
 import Footer from "../layouts/Footer/Index";
 import HowItWorks from "../layouts/HowItWorks/Index";
-// const inter = Inter({ subsets: ["latin"] });
-
+import InvestmentPlans from "../layouts/InvestmentPlans/Index";
 export default function Home() {
   return (
     <>
       <Header />
       <Hero />
+      <InvestmentPlans />
       <HowItWorks />
       <Footer />
     </>

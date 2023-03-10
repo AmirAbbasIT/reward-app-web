@@ -1,7 +1,9 @@
 // Import the functions you need from the SDKs you need
 import Firebase from "firebase/compat/app";
 import "firebase/compat/auth";
-import "firebase/compat/firestore";
+// import "firebase/compat/firestore";
+import "firebase/compat/database";
+
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 // import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -22,6 +24,10 @@ if (!Firebase?.apps.length) {
   Firebase?.initializeApp(firebaseConfig);
 }
 export default Firebase;
+
+export const getDb = () => {
+  return Firebase.app().database();
+};
 
 export const signInWithGoogle = () => {
   const provider = new GoogleAuthProvider();
