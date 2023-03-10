@@ -16,7 +16,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
   React.useEffect(() => {
     if (!store.getState().plans?.plans.length) {
-      // debugger;
       store.getActions().plans.getPlans();
     }
   }, []);
